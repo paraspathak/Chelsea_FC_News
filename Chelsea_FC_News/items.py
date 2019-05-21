@@ -6,9 +6,14 @@
 # https://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.loader.processors import MapCompose, TakeFirst
+from w3lib.html import remove_tags
 
 
-class ChelseaFcNewsItem(scrapy.Item):
+class WAGNHItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    wagnh_text = scrapy.Field(
+        input_processor = MapCompose(remove_tags),
+        output_processor = TakeFirst()
+    )
     pass
