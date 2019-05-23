@@ -27,7 +27,14 @@ while True:
 
         #------------------------
         #third load all the emails from the file
-        users = ['paraspathak@outlook.com','paraspathak@icloud.com']
+        import emails_handler
+        print("Current Users in databse are:\n")
+        users = emails_handler.read_emails()
+        for user in users:
+            print(user)
+        to_add = input("Do you want to add more users?\nPress 1 to ADD: ")
+        if(to_add==1):
+            emails_handler.write_emails()
 
         #------------------------
         #fourth we email the file
