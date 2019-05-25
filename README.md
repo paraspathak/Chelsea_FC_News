@@ -8,3 +8,9 @@ Make Sure you have the required dependicies:
 To run it yourself clone this repo 
 	cd to the directory
 	type python controller.py
+	
+How to install scrapy:
+	https://docs.scrapy.org/en/latest/intro/install.html
+	
+How to install Python 3
+	https://realpython.com/installing-python/
