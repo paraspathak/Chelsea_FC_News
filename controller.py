@@ -32,10 +32,11 @@ while True:
         users = emails_handler.read_emails()
         for user in users:
             print(user)
+        """
         to_add = input("Do you want to add more users?\nPress 1 to ADD: ")
         if(to_add==1):
             emails_handler.write_emails()
-
+        """
         #------------------------
         #fourth we email the file
         import send_email
