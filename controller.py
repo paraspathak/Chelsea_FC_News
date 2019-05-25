@@ -44,7 +44,9 @@ while True:
         email = send_email.Email_Sender()
         email.user_to_send_to = users
         email.send_email(total_website_data, "Chelsea Headlines")
-
+    except Exception as e:
+        logging.error(e)
+    finally:
         #delete the file so as to prevent further addition
         import os
         os.remove("./data.csv")
@@ -53,5 +55,4 @@ while True:
 
         import time
         time.sleep(86400)  #make it sleep for 1 day (24 hours)
-    except Exception as e:
-        logging.error(e)
+
