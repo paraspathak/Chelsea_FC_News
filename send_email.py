@@ -30,7 +30,7 @@ class Email_Sender:
             message['From'] = self.account_to_send_from     # ie one email per person will be sent to all the people in the list user_to_send_to
             message['To'] = email
             message['Subject'] = title
-            message.attach(MIMEText(msg))
+            message.attach(MIMEText(msg,'html'))        #added html tags to include links
 
             mail_server = smtplib.SMTP('smtp.gmail.com', 587)
             mail_server.ehlo()

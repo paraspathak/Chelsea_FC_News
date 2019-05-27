@@ -2,28 +2,16 @@
 import logging
 while True:
     try:
-        #First we run the spider to get the info from the website
+        #First we run the spiders to get the info from the website
         from subprocess import call
         call(["scrapy","crawl", "wagnh", "-o", "data.csv"])     #store in the form of data.csv
+        call(["scrapy","crawl", "links", "-o", "link.csv"])     #store the links in the form of link.csv
 
         #------------------------
         #secondly we read the file
-        import os
-        import fileinput
-        total_website_data ='Chelsea News from Weaintgotnohistory.sbnation.com\n'
-        last_title_emailed = ''     #to store the last title if you want to minimze emails
-        counter = 1
-        with open("data.csv","r") as f:
-            for line in f:
-                if(counter!=1):
-                    if counter == 2:
-                        last_title_emailed = line
-                    total_website_data+=line
-                    counter+=1
-                else:
-                    counter+=1
-        #print(total_website_data)
-        print("Last statement emailed is", last_title_emailed)
+        import parse_csv
+        #get the formatted html texts combining links and headline to email
+        total_website_data = parse_csv.parsed_html('link.csv','data.csv',10)
 
         #------------------------
         #third load all the emails from the file
