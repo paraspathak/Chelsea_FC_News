@@ -1,5 +1,5 @@
 # Chelsea-FC-News
-Get email of current headlines about Chelsea Fc in your email daily
+Get email of current headlines hyperlinked with the corresponding articles about Chelsea FC in your email daily
 
 Make Sure you have the required dependicies:
 1) Python 3
