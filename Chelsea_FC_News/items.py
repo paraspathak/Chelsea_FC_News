@@ -17,3 +17,13 @@ class WAGNHItem(scrapy.Item):
         output_processor = TakeFirst()
     )
     pass
+
+
+class LinksItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    links_text = scrapy.Field(
+         input_processor = MapCompose(remove_tags),
+        output_processor = TakeFirst()
+    )
+    pass
