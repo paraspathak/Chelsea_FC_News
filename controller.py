@@ -38,6 +38,7 @@ while True:
         #delete the file so as to prevent further addition
         import os
         os.remove("./data.csv")
+        os.remove("./link.csv")
 
         #make the program sleep for 1 day
 
