@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Web Scrapper that scrapes for news about Chelsea and sends a daily email of it" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Chelsea FC News Web Scraper</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/paraspathak/Chelsea_FC_News">Fork me</a>
+
+          <h1 id="project_title">Chelsea FC News</h1>
+          <h2 id="project_tagline">Python Web Scrapper to scrape Chelsea FC news and email then daily.</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/paraspathak/Chelsea_FC_News">Download this project as a .zip file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Features of Chelsea FC Scraper</h1>
+        <ol>
+          <li><p>Runs daily at user specified time.</p></li>
+          <li><p>Sends email to users in the database, which can be updated using the text file. </p></li>
+          <li><p>Scrapes weaintgotnohistory.sbnation.com for Chelsea news.  </p> </li>
+          <li><p>Creates the news along with hyperlink to the story.  </p> </li>
+        </ol>
+
+        <h1>Dependency</h1>
+        <ol>
+          <li>
+            <p>Python 3 
+            <a href="https://realpython.com/installing-python/">(Link)</a>
+          </p>
+          </li> 
+          <li>
+            <p>Scrapy <a href="https://docs.scrapy.org/en/latest/intro/install.html">(Link)</a></p>
+          </li>
+          <li>
+            <p>Internet Connection </p>
+          </li>
+        </ol>
+
+        <h1>To run Chelsea FC Web Scraper </h1>
+        <p> <strong>Clone</strong> this repository and change directory to the cloned folder. Then: </p>
+
+        <ol>
+          <li>
+            <p>After you are in the main folder of the repository type: </p>
+              <code>xdg-open emails.txt   </code>
+              <p> Then add email addresses of people separated by a new line</p>
+          </li>
+          <li>
+            <p>If you have all the required dependency then type:</p>
+              <code>python controller.py &</code>
+              <p> This runs the process in the background and allows you to continue your work</p>
+          </li>
+        </ol>
+
+    
+        <h2>Some screenshots</h2>
+        <img src="img/email.png"/>
+        <p align="center">Email sample send by the scraper    </p>
+        
+        If you like it please star and fork!
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Slate theme maintained by <a href="https://github.com/jasoncostello">Jason Costello</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
